@@ -75,3 +75,50 @@ h2 {
 .no {
   color: red;
 }
+
+
+/* =========================
+   DESKTOP IMPROVEMENTS
+========================= */
+
+@media (min-width: 900px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* contenitore generale centrato */
+  body > * {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  /* dashboard più elegante */
+  .dashboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* classifica più compatta e “dashboard style” */
+  #classifica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .rank-card {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  /* eventi in due colonne su PC */
+  #eventi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .event-card {
+    height: fit-content;
+  }
+}
