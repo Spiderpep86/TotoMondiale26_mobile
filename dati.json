@@ -476,8 +476,8 @@
    {
 	  	  "fase":"Ottavi",
     "evento": "Brasile - Norvegia",
-    "esito": "?",
- 	    "esitoExtra": "?",
+    "esito": "Norvegia",
+ 	    "esitoExtra": "Gol",
     "tipoExtra": "Gol / NoGol",
     "pronostici": {
       "Michele B": "Norvegia",
@@ -547,7 +547,7 @@
       "Michele B": "NoGol",
       "Carmine": "Gol",
       "Michele L": "Gol",
-      "Michele C": "Gol",
+      "Michele C": "NoGol",
 	  "Lello": "Gol",
       "Ciro": "Gol",
       "Alfredo": "Gol",
