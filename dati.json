@@ -656,8 +656,8 @@
     {
 	  	  "fase":"Ottavi",
    "evento": "Argentina - Egitto",
-    "esito": "?",
- 	    "esitoExtra": "?",
+    "esito": "Argentina",
+ 	    "esitoExtra": "Gol",
     "tipoExtra": "Gol / NoGol",
     "pronostici": {
       "Michele B": "Argentina",
@@ -701,8 +701,8 @@
    {
 	  	  "fase":"Ottavi",
     "evento": "Svizzera - Colombia",
-    "esito": "?",
-	    "esitoExtra": "?",
+    "esito": "Svizzera",
+	    "esitoExtra": "NoGol",
     "tipoExtra": "Gol / NoGol",
     "pronostici": {
       "Michele B": "Svizzera",
