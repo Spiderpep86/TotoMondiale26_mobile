@@ -566,8 +566,8 @@
    {
 	  	  "fase":"Ottavi",
     "evento": "Portogallo - Spagna",
-	    "esito": "?",
- 	    "esitoExtra": "?",
+	    "esito": "Spagna",
+ 	    "esitoExtra": "NoGol",
     "tipoExtra": "Gol / NoGol",
     "pronostici": {
       "Michele B": "Spagna",
@@ -611,8 +611,8 @@
    {
 	  	  "fase":"Ottavi",
     "evento": "USA - Belgio",
-	    "esito": "?",
-	    "esitoExtra": "?",
+	    "esito": "Belgio",
+	    "esitoExtra": "Gol",
     "tipoExtra": "Gol / NoGol",
     "pronostici": {
       "Michele B": "Belgio",
