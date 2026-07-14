@@ -1023,7 +1023,7 @@
 
 
     "pronostici": {
-      "Michele B": "Argentina",
+      "Michele B": "Francia",
       "Carmine": "Francia",
       "Michele L": "Francia",
       "Michele C": "Spagna",
@@ -1121,7 +1121,7 @@
 
 
     "pronostici": {
-      "Michele B": "Argentina",
+      "Michele B": "Inghilterra",
       "Carmine": "Argentina",
       "Michele L": "Inghilterra",
       "Michele C": "Argentina",
@@ -1163,7 +1163,7 @@
 
 
     "pronosticiUnderOver": {
-      "Michele B": "Over",
+      "Michele B": "Under",
       "Carmine": "Under",
       "Michele L": "Over",
       "Michele C": "Under",
@@ -1184,7 +1184,7 @@
 
 
     "pronosticiRisultato": {
-      "Michele B": "2-1",
+      "Michele B": "1-1",
       "Carmine": "1-1",
       "Michele L": "2-1",
       "Michele C": "1-1",
