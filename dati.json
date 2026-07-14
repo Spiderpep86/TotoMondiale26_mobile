@@ -1011,15 +1011,15 @@
     "fase": "Semifinali",
     "evento": "Francia - Spagna",
 
-    "esito": "?",
+    "esito": "Spagna",
 
-    "esitoExtra": "?",
+    "esitoExtra": "NoGol",
     "tipoExtra": "Gol / NoGol",
 
     "tipoUnderOver": "Under / Over",
-    "esitoUnderOver": "?",
+    "esitoUnderOver": "Under",
 
-    "risultatoEsatto": "",
+    "risultatoEsatto": "0-2",
 
 
     "pronostici": {
