@@ -1109,15 +1109,15 @@
     "fase": "Semifinali",
     "evento": "Inghilterra - Argentina",
 
-    "esito": "?",
+    "esito": "Argentina",
 
-    "esitoExtra": "?",
+    "esitoExtra": "Gol",
     "tipoExtra": "Gol / NoGol",
 
     "tipoUnderOver": "Under / Over",
-    "esitoUnderOver": "?",
+    "esitoUnderOver": "Over",
 
-    "risultatoEsatto": "",
+    "risultatoEsatto": "2-1",
 
 
     "pronostici": {
