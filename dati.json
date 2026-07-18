@@ -1209,17 +1209,17 @@
     "fase": "Finale 3/4 Posto",
     "evento": "Francia - Inghilterra",
 
-    "esito": "?",
+    "esito": "Inghilterra",
 
-    "esitoExtra": "?",
+    "esitoExtra": "Gol",
     "tipoExtra": "Gol / NoGol",
 
     "tipoUnderOver": "Under / Over",
-    "esitoUnderOver": "?",
+    "esitoUnderOver": "Over",
 
-    "risultatoEsatto": "?",
+    "risultatoEsatto": "3-5",
 
-    "parzialePrimoTempo": "?",
+    "parzialePrimoTempo": "2-2",
 
 
     "pronostici": {
