@@ -87,7 +87,22 @@ giocatori.forEach(g=>{
 dati.forEach(p=>{
 
 
+// ===============================
+// FINALE - NUOVA LOGICA
+// ===============================
 
+if(
+p.fase==="Finale"
+){
+
+calcolaPuntiFinale(
+p,
+c
+);
+
+return;
+
+}
 
 
 // =================================
@@ -183,7 +198,51 @@ if(
 }
 
 
+if(
+p.calciAngolo &&
+p.calciAngolo!=="?"
+){
 
+clsAngoli =
+angoli===p.calciAngolo
+?
+"ok"
+:
+(angoli ? "no":"neutral");
+
+}
+
+
+
+if(
+p.cartellini &&
+p.cartellini!=="?"
+){
+
+clsCartellini =
+cartellini===p.cartellini
+?
+"ok"
+:
+(cartellini ? "no":"neutral");
+
+}
+
+
+
+if(
+p.marcatorePrimo &&
+p.marcatorePrimo!=="?"
+){
+
+clsMarcatore =
+marcatore===p.marcatorePrimo
+?
+"ok"
+:
+(marcatore ? "no":"neutral");
+
+}
 
 
 
@@ -484,6 +543,303 @@ return Object.values(c)
 
 }
 
+// =================================
+// CALCOLO FINALE
+// =================================
+
+function calcolaPuntiFinale(p,c){
+
+
+    // se la finale non è conclusa non assegna nulla
+
+    if(
+        p.esito==="?"
+        ||
+        p.esitoExtra==="?"
+        ||
+        p.esitoUnderOver==="?"
+        ||
+        p.calciAngolo==="?"
+        ||
+        p.cartellini==="?"
+        ||
+        p.risultatoEsatto==="?"
+        ||
+        p.parzialePrimoTempo==="?"
+        ||
+        p.marcatorePrimo==="?"
+    ){
+
+        return;
+
+    }
+
+
+
+
+
+
+    giocatori.forEach(g=>{
+
+
+        let centrati=0;
+
+
+
+
+        // 1 SQUADRA VINCENTE
+
+        if(
+        p.pronostici?.[g]
+        ===
+        p.esito
+        ){
+
+            c[g].punti +=1;
+
+            centrati++;
+
+        }
+
+
+
+
+
+
+        // 2 GOL / NO GOL
+
+        if(
+        p.pronosticiExtra?.[g]
+        ===
+        p.esitoExtra
+        ){
+
+            c[g].punti +=1;
+
+            centrati++;
+
+        }
+
+
+
+
+
+
+        // 3 UNDER / OVER
+
+        if(
+        p.pronosticiUnderOver?.[g]
+        ===
+        p.esitoUnderOver
+        ){
+
+            c[g].punti +=1;
+
+            centrati++;
+
+        }
+
+
+
+
+
+
+
+        // 4 CALCI D'ANGOLO
+
+        if(
+        p.pronosticiCalciAngolo?.[g]
+        ===
+        p.calciAngolo
+        ){
+
+            c[g].punti +=2;
+
+            centrati++;
+
+        }
+
+
+
+
+
+
+
+        // 5 CARTELLINI
+
+        if(
+        p.pronosticiCartellini?.[g]
+        ===
+        p.cartellini
+        ){
+
+            c[g].punti +=2;
+
+            centrati++;
+
+        }
+
+
+
+
+
+
+
+
+        // 6 RISULTATO ESATTO
+
+        let risultatoOk =
+        p.pronosticiRisultato?.[g]
+        ===
+        p.risultatoEsatto;
+
+
+
+        if(risultatoOk){
+
+
+            centrati++;
+
+
+            if(
+            p.jolly?.[g]==="Risultato"
+            ){
+
+                c[g].punti +=4;
+
+            }
+            else{
+
+                c[g].punti +=2;
+
+            }
+
+
+        }
+        else if(
+        p.jolly?.[g]==="Risultato"
+        ){
+
+            c[g].punti -=2;
+
+        }
+
+
+
+
+
+
+
+
+        // 7 PARZIALE / FINALE
+
+        let parzialeOk =
+        p.pronosticiParziale?.[g]
+        ===
+        p.parzialePrimoTempo;
+
+
+
+
+        if(parzialeOk){
+
+
+            centrati++;
+
+
+            if(
+            p.jolly?.[g]==="Parziale"
+            ){
+
+                c[g].punti +=4;
+
+            }
+            else{
+
+                c[g].punti +=2;
+
+            }
+
+
+        }
+        else if(
+        p.jolly?.[g]==="Parziale"
+        ){
+
+            c[g].punti -=2;
+
+        }
+
+
+
+
+
+
+
+
+        // 8 PRIMO MARCATORE
+
+        let marcatoreOk =
+        p.pronosticiMarcatore?.[g]
+        ===
+        p.marcatorePrimo;
+
+
+
+
+        if(marcatoreOk){
+
+
+            centrati++;
+
+
+            if(
+            p.jolly?.[g]==="Marcatore"
+            ){
+
+                c[g].punti +=8;
+
+            }
+            else{
+
+                c[g].punti +=4;
+
+            }
+
+
+        }
+        else if(
+        p.jolly?.[g]==="Marcatore"
+        ){
+
+            c[g].punti -=4;
+
+        }
+
+
+
+
+
+
+
+        // SUPERBONUS
+
+        if(
+        centrati>=6
+        ){
+
+            c[g].punti +=4;
+
+        }
+
+
+
+    });
+
+
+
+}
+
 // =========================
 // RENDER CLASSIFICA
 // =========================
@@ -660,7 +1016,8 @@ const semifinale =
 p.fase==="Semifinali";
 
 
-
+const finale =
+p.fase==="Finale";
 
 
 
@@ -670,7 +1027,10 @@ p.fase==="Semifinali";
 html +=`
 
 
-<div class="pick header ${finale34 ? "finale34" : ""}">
+<div class="pick header 
+${semifinale ? "semifinale" : ""}
+${finale || finale34 ? "finale" : ""}
+">
 
 
 <div class="pick-name">
@@ -692,9 +1052,17 @@ G/N
 U/O
 </div>
 
+<div>
+Angoli
+</div>
+
+
+<div>
+Cart.
+</div>
 
 ${
-(semifinale || finale34)
+(semifinale || finale || finale34)
 
 ?
 
@@ -713,14 +1081,18 @@ Risultato
 
 
 ${
-finale34
+(finale || finale34)
 
 ?
 
 `
 
 <div>
-1° Tempo
+Parziale
+</div>
+
+<div>
+Marcatore
 </div>
 
 <div>
@@ -776,7 +1148,16 @@ const jolly =
 p.jolly?.[g] || "";
 
 
+const angoli =
+p.pronosticiCalciAngolo?.[g] || "";
 
+
+const cartellini =
+p.pronosticiCartellini?.[g] || "";
+
+
+const marcatore =
+p.pronosticiMarcatore?.[g] || "";
 
 
 
@@ -790,7 +1171,11 @@ let clsResult="neutral";
 
 let clsParziale="neutral";
 
+let clsAngoli="neutral";
 
+let clsCartellini="neutral";
+
+let clsMarcatore="neutral";
 
 
 
@@ -906,7 +1291,10 @@ parziale===p.parzialePrimoTempo
 
 html +=`
 
-<div class="pick ${finale34 ? "finale34" : ""}">
+<div class="pick 
+${semifinale ? "semifinale" : ""}
+${finale || finale34 ? "finale" : ""}
+">
 
 
 
@@ -936,12 +1324,19 @@ ${under}
 </div>
 
 
+<div class="${clsAngoli}">
+${angoli}
+</div>
 
+
+<div class="${clsCartellini}">
+${cartellini}
+</div>
 
 
 
 ${
-(semifinale || finale34)
+(semifinale || finale || finale34)
 
 ?
 
@@ -964,7 +1359,7 @@ ${risultato}
 
 
 ${
-finale34
+(finale || finale34)
 
 ?
 
@@ -972,6 +1367,10 @@ finale34
 
 <div class="${clsParziale}">
 ${parziale}
+</div>
+
+<div class="${clsMarcatore}">
+${marcatore}
 </div>
 
 
