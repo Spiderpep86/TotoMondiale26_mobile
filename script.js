@@ -1284,7 +1284,38 @@ parziale===p.parzialePrimoTempo
 }
 
 
+// CALCI D'ANGOLO
+if (
+    p.calciAngolo &&
+    p.calciAngolo !== "?"
+) {
+    clsAngoli =
+        angoli === p.calciAngolo
+            ? "ok"
+            : (angoli ? "no" : "neutral");
+}
 
+// CARTELLINI
+if (
+    p.cartellini &&
+    p.cartellini !== "?"
+) {
+    clsCartellini =
+        cartellini === p.cartellini
+            ? "ok"
+            : (cartellini ? "no" : "neutral");
+}
+
+// PRIMO MARCATORE
+if (
+    p.marcatorePrimo &&
+    p.marcatorePrimo !== "?"
+) {
+    clsMarcatore =
+        marcatore === p.marcatorePrimo
+            ? "ok"
+            : (marcatore ? "no" : "neutral");
+}
 
 
 
