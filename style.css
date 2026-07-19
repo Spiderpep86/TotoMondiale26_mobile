@@ -1,23 +1,39 @@
 /* =========================
-   BASE
+   RESET
 ========================= */
 
-* {
-  box-sizing:border-box;
+*{
+    box-sizing:border-box;
 }
 
 
-body {
+body{
 
-  margin:0;
+    margin:0;
 
-  padding:15px;
+    padding:0;
 
-  font-family:Arial,sans-serif;
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  background:#f4f4f4;
+    background:#f4f6f8;
 
-  color:#222;
+    color:#222;
+
+}
+
+
+
+
+.container{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
 
 }
 
@@ -28,309 +44,24 @@ body {
    HEADER
 ========================= */
 
-h1 {
 
-  text-align:center;
+h1{
 
-  font-size:24px;
+    text-align:center;
 
-}
+    margin:20px 0;
 
-
-
-
-
-/* =========================
-   CLASSIFICA
-========================= */
-
-#classifica {
-
-  margin-bottom:20px;
-
-}
-
-
-.rank-simple {
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  background:white;
-
-  padding:12px;
-
-  margin-bottom:6px;
-
-  border-radius:10px;
-
-  box-shadow:
-  0 1px 4px rgba(0,0,0,.15);
+    color:#1f2937;
 
 }
 
 
 
-.rank-left {
+h2{
 
-  display:flex;
+    margin-top:25px;
 
-  gap:10px;
-
-  align-items:center;
-
-}
-
-
-
-.name {
-
-  font-weight:bold;
-
-}
-
-
-
-
-
-/* =========================
-   EVENTI
-========================= */
-
-.collapsible {
-
-  background:white;
-
-  margin-bottom:15px;
-
-  border-radius:12px;
-
-  overflow:hidden;
-
-  box-shadow:
-  0 2px 5px rgba(0,0,0,.15);
-
-}
-
-
-
-.collapsible-header {
-
-  display:flex;
-
-  justify-content:space-between;
-
-  padding:15px;
-
-  background:#222;
-
-  color:white;
-
-  cursor:pointer;
-
-  font-weight:bold;
-
-}
-
-
-
-.collapsible-content {
-
-  display:none;
-
-  padding:10px;
-
-}
-
-
-
-.collapsible.open .collapsible-content {
-
-  display:block;
-
-}
-
-
-
-
-
-/* =========================
-   TABELLA PRONOSTICI
-========================= */
-
-.pick {
-
-  display:grid;
-
-  align-items:center;
-
-  padding:8px 5px;
-
-  border-bottom:1px solid #ddd;
-
-  text-align:center;
-
-}
-
-
-
-/*
-   Eventi normali
-   4 colonne
-*/
-
-.pick {
-
-  grid-template-columns:
-
-  1.5fr
-  .6fr
-  .6fr
-  .8fr;
-
-}
-
-
-
-/*
-   Semifinali
-   5 colonne
-*/
-
-.pick:has(.pick-result):not(:has(.pick-parziale)) {
-
-  grid-template-columns:
-
-  1.5fr
-  .6fr
-  .6fr
-  .8fr
-  .8fr;
-
-}
-
-
-
-
-/*
-   Finale 3/4 posto
-   7 colonne
-*/
-
-.pick.finale34 {
-
-  grid-template-columns:
-
-  1.4fr
-  .8fr
-  .8fr
-  .8fr
-  .8fr
-  .8fr
-  .7fr;
-
-}
-
-
-
-
-.pick-name {
-
-  text-align:left;
-
-  font-weight:500;
-
-}
-
-
-
-.pick-main,
-.pick-extra,
-.pick-under,
-.pick-result,
-.pick-parziale,
-.pick-jolly {
-
-  font-weight:bold;
-
-}
-
-
-
-
-
-/* HEADER */
-
-.pick.header {
-
-  background:#eee;
-
-  font-weight:bold;
-
-  border-radius:5px;
-
-}
-
-
-
-
-
-/* =========================
-   COLORI PRONOSTICI
-========================= */
-
-
-.ok {
-
-  background:#c8f7c5;
-
-  color:#146b14;
-
-  border-radius:6px;
-
-  padding:4px;
-
-}
-
-
-
-
-.no {
-
-  background:#ffc8c8;
-
-  color:#9b0000;
-
-  border-radius:6px;
-
-  padding:4px;
-
-}
-
-
-
-
-.neutral {
-
-  color:#777;
-
-}
-
-
-
-
-/* =========================
-   EVENTO
-========================= */
-
-.evento {
-
-  padding:12px 5px;
-
-  font-size:15px;
+    color:#374151;
 
 }
 
@@ -342,30 +73,383 @@ h1 {
    STATISTICHE
 ========================= */
 
-.stats {
 
-  display:grid;
+.stats{
 
-  grid-template-columns:
-  repeat(2,1fr);
+    display:grid;
 
-  gap:10px;
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.stat-box{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    text-align:center;
+
+    box-shadow:
+    0 2px 6px rgba(0,0,0,.08);
 
 }
 
 
 
-.stat-box {
+.stat-box span{
 
-  background:white;
+    display:block;
 
-  padding:15px;
+    font-size:26px;
 
-  text-align:center;
+    font-weight:bold;
 
-  border-radius:10px;
+    color:#2563eb;
 
 }
+
+
+
+
+
+
+/* =========================
+   CLASSIFICA
+========================= */
+
+
+#classifica{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    box-shadow:
+    0 2px 6px rgba(0,0,0,.08);
+
+}
+
+
+
+
+.rank-simple{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px;
+
+    border-bottom:1px solid #eee;
+
+    font-size:18px;
+
+}
+
+
+
+.rank-left{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+}
+
+
+
+.rank-simple b{
+
+    font-size:22px;
+
+    color:#111827;
+
+}
+
+
+
+
+.name{
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   EVENTI COLLASSABILI
+========================= */
+
+
+.collapsible{
+
+    background:white;
+
+    margin-bottom:15px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 2px 6px rgba(0,0,0,.08);
+
+}
+
+
+
+
+.collapsible-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    background:#1f2937;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+
+
+.collapsible-content{
+
+    display:none;
+
+    padding:10px;
+
+}
+
+
+
+.collapsible.open 
+.collapsible-content{
+
+    display:block;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   TABELLA PRONOSTICI
+========================= */
+
+.pick{
+
+    display:grid;
+
+    gap:4px;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:6px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    font-size:14px;
+
+}
+
+
+/* partite normali */
+
+.pick:not(.semifinale):not(.finale){
+
+    grid-template-columns:
+    1.8fr
+    repeat(5,1fr);
+
+}
+
+
+/* semifinali */
+
+.pick.semifinale{
+
+    grid-template-columns:
+    1.8fr
+    repeat(6,1fr);
+
+}
+
+
+/* finali */
+
+.pick.finale{
+
+    grid-template-columns:
+    1.8fr
+    repeat(9,1fr);
+
+}
+
+
+
+
+.pick-name{
+
+
+    text-align:left;
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+.header{
+
+
+    background:#111827;
+
+    color:white;
+
+    font-weight:bold;
+
+    border-radius:6px;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   RISULTATI
+========================= */
+
+
+.ok{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-weight:bold;
+
+    border-radius:5px;
+
+    padding:5px;
+
+}
+
+
+
+.no{
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    font-weight:bold;
+
+    border-radius:5px;
+
+    padding:5px;
+
+}
+
+
+
+.neutral{
+
+    background:#f3f4f6;
+
+    color:#6b7280;
+
+    border-radius:5px;
+
+    padding:5px;
+
+}
+
+
+
+
+
+/* =========================
+   EVENTO FOOTER
+========================= */
+
+
+.evento{
+
+    margin-top:10px;
+
+    padding:10px;
+
+    background:#f9fafb;
+
+    font-weight:bold;
+
+    border-radius:8px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   FINALE
+========================= */
+
+
+.finale34{
+
+    background:#fff7ed;
+
+}
+
+
+
 
 
 
@@ -375,78 +459,92 @@ h1 {
    MOBILE
 ========================= */
 
-@media(max-width:500px){
+
+@media(max-width:900px){
 
 
-body {
+.stats{
 
-  padding:10px;
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+.pick{
+
+    width:max-content;
+
+    min-width:100%;
 
 }
 
 
 
-.pick {
+.collapsible-content{
 
-  font-size:11px;
-
-}
-
-
-
-/*
- Eventi normali
-*/
-
-.pick {
-
-  grid-template-columns:
-
-  1.3fr
-  .5fr
-  .5fr
-  .7fr;
+    overflow-x:auto;
 
 }
 
 
 
-/*
- Semifinali
-*/
+}
 
-.pick:has(.pick-result):not(:has(.pick-parziale)) {
 
-  grid-template-columns:
 
-  1.3fr
-  .45fr
-  .45fr
-  .65fr
-  .75fr;
+@media(max-width:600px){
+
+
+body{
+
+    font-size:14px;
 
 }
 
 
 
+.container{
 
-/*
- Finale 3/4
-*/
-
-.pick.finale34 {
-
-  grid-template-columns:
-
-  1.4fr
-  .8fr
-  .8fr
-  .8fr
-  .8fr
-  .8fr
-  .7fr;
+    width:98%;
 
 }
 
 
+
+.rank-simple{
+
+    font-size:15px;
+
+}
+
+
+
+.stat-box span{
+
+    font-size:22px;
+
+}
+
+
+
+}
+
+.pick{
+    display:grid !important;
+}
+
+
+.pick:not(.semifinale):not(.finale){
+    grid-template-columns: 1.8fr repeat(5,1fr) !important;
+}
+
+
+.pick.semifinale{
+    grid-template-columns: 1.8fr repeat(6,1fr) !important;
+}
+
+
+.pick.finale{
+    grid-template-columns: 1.8fr repeat(9,1fr) !important;
 }
