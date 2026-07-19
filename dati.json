@@ -1359,7 +1359,208 @@
 
     }
 
+  },
+  
+  {
+  "fase":"Finale",
+  "evento":"Spagna - Argentina",
+  "esito":"?",
+  "esitoExtra":"?",
+  "esitoUnderOver":"?",
+  "calciAngolo":"?",
+  "cartellini":"?",
+  "risultatoEsatto":"?",
+  "parzialePrimoTempo":"?",
+  "marcatorePrimo":"?",
+  "pronostici":{
+ "Michele B": "Spagna",
+      "Carmine": "Spagna",
+      "Michele L": "Spagna",
+      "Michele C": "Argentina",
+      "Lello": "-",
+      "Ciro": "Spagna",
+      "Alfredo": "Argentina",
+      "Marco": "Spagna",
+      "Mario": "Argentina",
+      "Vincenzo": "Spagna",
+      "Tore": "Spagna",
+      "Emanuele": "Argentina",
+      "Claudio": "Argentina",
+      "Peppe": "Spagna",
+      "Diana": "Spagna",
+      "Menzo": "Spagna",
+      "Mister": "Spagna"
+  },
+
+
+  "pronosticiExtra":{
+"Michele B": "NoGol",
+      "Carmine": "Gol",
+      "Michele L": "Gol",
+      "Michele C": "Gol",
+      "Lello": "-",
+      "Ciro": "Gol",
+      "Alfredo": "Gol",
+      "Marco": "Gol",
+      "Mario": "NoGol",
+      "Vincenzo": "Gol",
+      "Tore": "Gol",
+      "Emanuele": "Gol",
+      "Claudio": "Gol",
+      "Peppe": "NoGol",
+      "Diana": "Gol",
+      "Menzo": "Gol",
+      "Mister": "Gol"
+  },
+
+
+  "pronosticiUnderOver":{
+      "Michele B": "Under",
+      "Carmine": "Under",
+      "Michele L": "Over",
+      "Michele C": "Over",
+      "Lello": "-",
+      "Ciro": "Over",
+      "Alfredo": "Over",
+      "Marco": "Over",
+      "Mario": "Over",
+      "Vincenzo": "Over",
+      "Tore": "Over",
+      "Emanuele": "Over",
+      "Claudio": "Over",
+      "Peppe": "Under",
+      "Diana": "Over",
+      "Menzo": "Over",
+      "Mister": "Under"
+  },
+
+
+  "pronosticiCalciAngolo":{
+ "Michele B": "Spagna",
+      "Carmine": "Spagna",
+      "Michele L": "Argentina",
+      "Michele C": "Argentina",
+      "Lello": "-",
+      "Ciro": "Argentina",
+      "Alfredo": "Spagna",
+      "Marco": "Spagna",
+      "Mario": "Spagna",
+      "Vincenzo": "Spagna",
+      "Tore": "Spagna",
+      "Emanuele": "Spagna",
+      "Claudio": "Argentina",
+      "Peppe": "Spagna",
+      "Diana": "Spagna",
+      "Menzo": "Spagna",
+      "Mister": "Spagna"
+  },
+
+
+  "pronosticiCartellini":{
+ "Michele B": "Argentina",
+      "Carmine": "Argentina",
+      "Michele L": "Argentina",
+      "Michele C": "Argentina",
+      "Lello": "-",
+      "Ciro": "Argentina",
+      "Alfredo": "Argentina",
+      "Marco": "Argentina",
+      "Mario": "Argentina",
+      "Vincenzo": "Argentina",
+      "Tore": "Argentina",
+      "Emanuele": "Argentina",
+      "Claudio": "Argentina",
+      "Peppe": "Argentina",
+      "Diana": "Argentina",
+      "Menzo": "Argentina",
+      "Mister": "Argentina"
+  },
+
+
+  "pronosticiRisultato":{
+      "Michele B": "1-0",
+      "Carmine": "1-1",
+      "Michele L": "2-1",
+      "Michele C": "1-1",
+      "Lello": "-",
+      "Ciro": "3-1",
+      "Alfredo": "3-2",
+      "Marco": "2-1",
+      "Mario": "0-0",
+      "Vincenzo": "3-1",
+      "Tore": "3-2",
+      "Emanuele": "1-2",
+      "Claudio": "1-3",
+      "Peppe": "2-0",
+      "Diana": "4-2",
+      "Menzo": "3-1",
+      "Mister": "1-1"
+  },
+
+
+  "pronosticiParziale":{
+      "Michele B": "1-1",
+      "Carmine": "X-X",
+      "Michele L": "X-1",
+      "Michele C": "X-X",
+      "Lello": "-",
+      "Ciro": "1-1",
+      "Alfredo": "2-1",
+      "Marco": "1-1",
+      "Mario": "X-X",
+      "Vincenzo": "1-1",
+      "Tore": "X-1",
+      "Emanuele": "X-2",
+      "Claudio": "X-2",
+      "Peppe": "X-1",
+      "Diana": "1-1",
+      "Menzo": "1-1",
+      "Mister": "X-X"
+  },
+
+
+  "pronosticiMarcatore":{
+      "Michele B": "Oyarzabal",
+      "Carmine": "Oyarzabal",
+      "Michele L": "Yamal",
+      "Michele C": "Messi",
+      "Lello": "-",
+      "Ciro": "Oyarzabal",
+      "Alfredo": "Alvarez",
+      "Marco": "Yamal",
+      "Mario": "Nessuno",
+      "Vincenzo": "Yamal",
+      "Tore": "Olmo",
+      "Emanuele": "Messi",
+      "Claudio": "Oyarzabal",
+      "Peppe": "Olmo",
+      "Diana": "Porro",
+      "Menzo": "Olmo",
+      "Mister": "Yamal"
+  },
+
+
+  "jolly":{
+      "Michele B": "Parziale",
+      "Carmine": "Parziale",
+      "Michele L": "Marcatore",
+      "Michele C": "Marcatore",
+      "Lello": "-",
+      "Ciro": "Parziale",
+      "Alfredo": "Marcatore",
+      "Marco": "Parziale",
+      "Mario": "Marcatore",
+      "Vincenzo": "Parziale",
+      "Tore": "Risultato",
+      "Emanuele": "Marcatore",
+      "Claudio": "Risultato",
+      "Peppe": "Marcatore",
+      "Diana": "Parziale",
+      "Menzo": "Parziale",
+      "Mister": "Parziale"
   }
+
+}
 
   
 ]
